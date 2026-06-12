@@ -1,7 +1,42 @@
 // =====================================
 // VM Tips Bygma 2026
 // =====================================
+const SHEET_ID =
+"16eMjx-xSn0AHROWJUXOPyz7Z32F5oXJzxPryPyEMxzo";
 
+const GIDS = {
+  resultat: "976718944",
+  jol: "503444873",
+  nkk: "665250801",
+  kmk: "1760403342",
+  vvn: "1302942555",
+  jsn: "840420629",
+  voh: "1965820840",
+  jbm: "1764864171",
+  ehn: "2031358248",
+  esm: "1887543930",
+  jkn: "1838300414",
+  rni: "2033019900",
+  gsa: "1048491685",
+  tpl: "1283857625",
+  aai: "156992505",
+  mnh: "1677633699",
+  ptr: "958120002"
+};
+
+async function fetchSheet(gid) {
+
+  const url =
+    `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
+
+  const response =
+    await fetch(url);
+
+  const text =
+    await response.text();
+
+  return text;
+}
 document.addEventListener("DOMContentLoaded", () => {
 
     loadLeaderboard();

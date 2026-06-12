@@ -1,73 +1,26 @@
-[
-  {
-    "matchId": 3,
-    "home": "🇨🇦 Kanada",
-    "away": "🇧🇦 Bosnien",
-    "predictions": [
-      {
-        "player": "JOL",
-        "tip": "2-1"
-      },
-      {
-        "player": "JBM",
-        "tip": "2-1"
-      },
-      {
-        "player": "RNI",
-        "tip": "2-1"
-      },
-      {
-        "player": "TPL",
-        "tip": "2-1"
-      },
-      {
-        "player": "VVN",
-        "tip": "1-1"
-      },
-      {
-        "player": "AAI",
-        "tip": "1-1"
-      },
-      {
-        "player": "MNH",
-        "tip": "1-1"
-      },
-      {
-        "player": "PTR",
-        "tip": "1-1"
-      },
-      {
-        "player": "JSN",
-        "tip": "1-0"
-      },
-      {
-        "player": "ESM",
-        "tip": "1-0"
-      },
-      {
-        "player": "JKN",
-        "tip": "1-0"
-      },
-      {
-        "player": "NKK",
-        "tip": "2-0"
-      },
-      {
-        "player": "EHN",
-        "tip": "2-0"
-      },
-      {
-        "player": "VOH",
-        "tip": "0-1"
-      },
-      {
-        "player": "GSA",
-        "tip": "0-1"
-      },
-      {
-        "player": "KMK",
-        "tip": "2-2"
-      }
-    ]
-  }
-]
+{
+  "matches": [
+    {
+      "id": 1,
+      "name": "🇨🇦 Kanada - 🇧🇦 Bosnien",
+      "predictions": [
+        { "namn": "JOL", "tips": "2-1" },
+        { "namn": "NKK", "tips": "2-0" },
+        { "namn": "KMK", "tips": "2-2" },
+        { "namn": "VVN", "tips": "1-1" },
+        { "namn": "JSN", "tips": "1-0" },
+        { "namn": "VOH", "tips": "0-1" },
+        { "namn": "JBM", "tips": "2-1" },
+        { "namn": "EHN", "tips": "2-0" },
+        { "namn": "ESM", "tips": "1-0" },
+        { "namn": "JKN", "tips": "1-0" },
+        { "namn": "RNI", "tips": "2-1" },
+        { "namn": "GSA", "tips": "0-1" },
+        { "namn": "TPL", "tips": "2-1" },
+        { "namn": "AAI", "tips": "1-1" },
+        { "namn": "MNH", "tips": "1-1" },
+        { "namn": "PTR", "tips": "1-1" }
+      ]
+    }
+  ]
+}

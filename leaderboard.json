@@ -1,0 +1,114 @@
+[
+  {
+    "placering": 1,
+    "namn": "MNH",
+    "poang": 4,
+    "fulltraffar": 1,
+    "rattUtfall": 1
+  },
+  {
+    "placering": 2,
+    "namn": "RNI",
+    "poang": 3,
+    "fulltraffar": 1,
+    "rattUtfall": 0
+  },
+  {
+    "placering": 2,
+    "namn": "PTR",
+    "poang": 3,
+    "fulltraffar": 1,
+    "rattUtfall": 0
+  },
+  {
+    "placering": 2,
+    "namn": "JKN",
+    "poang": 3,
+    "fulltraffar": 1,
+    "rattUtfall": 0
+  },
+  {
+    "placering": 2,
+    "namn": "JBM",
+    "poang": 3,
+    "fulltraffar": 1,
+    "rattUtfall": 0
+  },
+  {
+    "placering": 2,
+    "namn": "ESM",
+    "poang": 3,
+    "fulltraffar": 1,
+    "rattUtfall": 0
+  },
+  {
+    "placering": 2,
+    "namn": "AAI",
+    "poang": 3,
+    "fulltraffar": 1,
+    "rattUtfall": 0
+  },
+  {
+    "placering": 8,
+    "namn": "NKK",
+    "poang": 2,
+    "fulltraffar": 0,
+    "rattUtfall": 2
+  },
+  {
+    "placering": 8,
+    "namn": "JSN",
+    "poang": 2,
+    "fulltraffar": 0,
+    "rattUtfall": 2
+  },
+  {
+    "placering": 10,
+    "namn": "VVN",
+    "poang": 1,
+    "fulltraffar": 0,
+    "rattUtfall": 1
+  },
+  {
+    "placering": 10,
+    "namn": "VOH",
+    "poang": 1,
+    "fulltraffar": 0,
+    "rattUtfall": 1
+  },
+  {
+    "placering": 10,
+    "namn": "TPL",
+    "poang": 1,
+    "fulltraffar": 0,
+    "rattUtfall": 1
+  },
+  {
+    "placering": 10,
+    "namn": "KMK",
+    "poang": 1,
+    "fulltraffar": 0,
+    "rattUtfall": 1
+  },
+  {
+    "placering": 10,
+    "namn": "JOL",
+    "poang": 1,
+    "fulltraffar": 0,
+    "rattUtfall": 1
+  },
+  {
+    "placering": 10,
+    "namn": "GSA",
+    "poang": 1,
+    "fulltraffar": 0,
+    "rattUtfall": 1
+  },
+  {
+    "placering": 10,
+    "namn": "EHN",
+    "poang": 1,
+    "fulltraffar": 0,
+    "rattUtfall": 1
+  }
+]

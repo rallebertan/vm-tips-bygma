@@ -18,11 +18,8 @@ async function loadLeaderboard() {
 
     try {
 
-        const response =
-            await fetch("leaderboard.json");
-
-        const players =
-            await response.json();
+        const response = await fetch("leaderboard.json");
+        const players = await response.json();
 
         const table =
             document.getElementById("leaderboard-body");
@@ -33,8 +30,7 @@ async function loadLeaderboard() {
 
         players.forEach(player => {
 
-            const row =
-                document.createElement("tr");
+            const row = document.createElement("tr");
 
             row.innerHTML = `
                 <td>${player.placering}</td>
@@ -48,7 +44,7 @@ async function loadLeaderboard() {
 
         });
 
-    } catch(error) {
+    } catch (error) {
 
         console.error(
             "Fel vid laddning av leaderboard",
@@ -89,9 +85,7 @@ async function loadMatches() {
 
             div.innerHTML = `
                 <strong>
-                    ${match.home}
-                    -
-                    ${match.away}
+                    ${match.home} - ${match.away}
                 </strong>
 
                 <br>
@@ -111,7 +105,7 @@ async function loadMatches() {
 
         });
 
-    } catch(error) {
+    } catch (error) {
 
         console.error(
             "Fel vid laddning av matcher",
@@ -169,14 +163,12 @@ async function loadPredictions() {
                         `match-${match.id}`
                     );
 
-                if(details.style.display === "none") {
+                if (details.style.display === "none") {
 
                     details.style.display = "block";
 
                     let html = `
-                        <table
-                            class="predictions-table"
-                        >
+                        <table class="predictions-table">
                     `;
 
                     match.predictions.forEach(p => {
@@ -206,7 +198,7 @@ async function loadPredictions() {
 
         });
 
-    } catch(error) {
+    } catch (error) {
 
         console.error(
             "Fel vid laddning av tips",
@@ -260,7 +252,7 @@ async function loadNextMatch() {
                 <hr>
 
                 <p>
-                    🇨🇦 Hemmaseger:
+                    🏠 Hemmaseger:
                     ${match.majority.homeWin}
                 </p>
 
@@ -270,7 +262,7 @@ async function loadNextMatch() {
                 </p>
 
                 <p>
-                    🇧🇦 Bortaseger:
+                    ✈️ Bortaseger:
                     ${match.majority.awayWin}
                 </p>
 
@@ -297,7 +289,7 @@ async function loadNextMatch() {
 
         `;
 
-    } catch(error) {
+    } catch (error) {
 
         console.error(
             "Fel vid laddning av nästa match",
@@ -309,7 +301,7 @@ async function loadNextMatch() {
 }
 
 // =====================================
-// STATISTIK
+// STATISTIK + AKTUELL LEDARE
 // =====================================
 
 async function loadStats() {
@@ -326,6 +318,29 @@ async function loadStats() {
             document.getElementById(
                 "stats-container"
             );
+
+        const leaderContainer =
+            document.getElementById(
+                "leader-container"
+            );
+
+        // Aktuell ledare
+
+        if (leaderContainer) {
+
+            leaderContainer.innerHTML = `
+                <h3>
+                    🥇 ${stats.leader.name}
+                </h3>
+
+                <p>
+                    ${stats.leader.points} poäng
+                </p>
+            `;
+
+        }
+
+        // Statistik
 
         if (!container) return;
 
@@ -381,7 +396,7 @@ async function loadStats() {
 
         `;
 
-    } catch(error) {
+    } catch (error) {
 
         console.error(
             "Fel vid laddning av statistik",

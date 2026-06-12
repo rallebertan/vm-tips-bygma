@@ -3,76 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VM Tips Bygma 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<title>🏆 VM Tips Bygma 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+--blue:#005293;
+--yellow:#FECB00;
+--bg:#F4F7FB;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    font-family:Poppins,sans-serif;
-    margin:0;
-    background:#f5f7fa;
+font-family:'Poppins',sans-serif;
+background:var(--bg);
 }
 
 header{
-    background:#005293;
-    color:white;
-    text-align:center;
-    padding:20px;
+background:var(--blue);
+color:white;
+padding:20px;
+text-align:center;
 }
 
-h1{
-    margin:0;
+header h1{
+font-size:28px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:15px;
 }
 
 .card{
-    background:white;
-    margin:15px;
-    padding:15px;
-    border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
-.gold{
-    color:#FECB00;
-    font-weight:bold;
+.card h2{
+margin-bottom:15px;
+color:var(--blue);
 }
 
 table{
-    width:100%;
-    border-collapse:collapse;
+width:100%;
+border-collapse:collapse;
 }
 
-td,th{
-    padding:10px;
-    border-bottom:1px solid #ddd;
-    text-align:left;
+th{
+background:var(--yellow);
+padding:10px;
+text-align:left;
 }
+
+td{
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+.badge{
+background:var(--yellow);
+padding:4px 10px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+.match{
+padding:12px;
+border:1px solid #ddd;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.stickare{
+padding:12px;
+background:#fff8d8;
+border-left:5px solid var(--yellow);
+margin-bottom:10px;
+border-radius:10px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#666;
+}
+
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
+
 <h1>🏆 VM Tips Bygma 2026</h1>
+
+<p>Live leaderboard</p>
+
 </header>
 
+<div class="container">
+
 <div class="card">
-<h2>🥇 Ledare</h2>
-<p class="gold">MNH – 4 poäng</p>
+
+<h2>🥇 Aktuell ledare</h2>
+
+<h3>MNH - 4 poäng</h3>
+
 </div>
 
 <div class="card">
-<h2>Senaste resultat</h2>
 
-<p>🇲🇽 Mexiko 2–0 Sydafrika 🇿🇦</p>
-<p>🇰🇷 Sydkorea 2–1 Tjeckien 🇨🇿</p>
-
-</div>
-
-<div class="card">
-
-<h2>Leaderboard</h2>
+<h2>🏆 Leaderboard</h2>
 
 <table>
 
@@ -82,27 +137,104 @@ td,th{
 <th>Poäng</th>
 </tr>
 
-<tr>
-<td>1</td>
-<td>MNH</td>
-<td>4</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>RNI</td>
-<td>3</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>PTR</td>
-<td>3</td>
-</tr>
+<tr><td>1</td><td>MNH</td><td>4</td></tr>
+<tr><td>2</td><td>RNI</td><td>3</td></tr>
+<tr><td>3</td><td>PTR</td><td>3</td></tr>
+<tr><td>4</td><td>JBM</td><td>3</td></tr>
+<tr><td>5</td><td>AAI</td><td>3</td></tr>
+<tr><td>6</td><td>JKN</td><td>3</td></tr>
+<tr><td>7</td><td>ESM</td><td>3</td></tr>
+<tr><td>8</td><td>NKK</td><td>2</td></tr>
+<tr><td>9</td><td>JSN</td><td>2</td></tr>
+<tr><td>10</td><td>JOL</td><td>1</td></tr>
+<tr><td>11</td><td>KMK</td><td>1</td></tr>
+<tr><td>12</td><td>VVN</td><td>1</td></tr>
+<tr><td>13</td><td>VOH</td><td>1</td></tr>
+<tr><td>14</td><td>EHN</td><td>1</td></tr>
+<tr><td>15</td><td>GSA</td><td>1</td></tr>
+<tr><td>16</td><td>TPL</td><td>1</td></tr>
 
 </table>
 
 </div>
+
+<div class="card">
+
+<h2>⚽ Senaste resultat</h2>
+
+<div class="match">
+🇲🇽 Mexiko 2–0 Sydafrika 🇿🇦
+</div>
+
+<div class="match">
+🇰🇷 Sydkorea 2–1 Tjeckien 🇨🇿
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🔮 Nästa match</h2>
+
+<div class="match">
+
+🇨🇦 Kanada – Bosnien 🇧🇦
+
+<br><br>
+
+<span class="badge">Kanada 9 tips</span>
+
+<span class="badge">Kryss 5 tips</span>
+
+<span class="badge">Bosnien 2 tips</span>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🎯 Stickare</h2>
+
+<div class="stickare">
+
+KMK är ensam om 2–2
+
+</div>
+
+<div class="stickare">
+
+VOH tror Bosnien vinner
+
+</div>
+
+<div class="stickare">
+
+GSA tror Bosnien vinner
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>📊 Statistik</h2>
+
+<p>🥇 Mest poäng: MNH</p>
+
+<p>🎯 Mest vågad: KMK</p>
+
+<p>⚽ Flest fullträffar: MNH</p>
+
+</div>
+
+</div>
+
+<footer>
+
+VM Tips Bygma 2026
+
+</footer>
 
 </body>
 </html>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "home": "🇲🇽 Mexiko",
+    "away": "🇿🇦 Sydafrika",
+    "result": "2-0",
+    "status": "slut",
+    "date": "2026-06-11 21:00"
+  },
+  {
+    "id": 2,
+    "home": "🇰🇷 Sydkorea",
+    "away": "🇨🇿 Tjeckien",
+    "result": "2-1",
+    "status": "slut",
+    "date": "2026-06-12 04:00"
+  },
+  {
+    "id": 3,
+    "home": "🇨🇦 Kanada",
+    "away": "🇧🇦 Bosnien",
+    "result": null,
+    "status": "kommande",
+    "date": "2026-06-12 21:00"
+  }
+]

@@ -17,10 +17,10 @@
   },
   {
     "id": 3,
-    "home": "🇨🇦 Kanada",
-    "away": "🇧🇦 Bosnien",
-    "result": null,
-    "status": "kommande",
+  "home": "🇨🇦 Kanada",
+  "away": "🇧🇦 Bosnien",
+  "result": "0-1"
+    "status": "LIVE",
     "date": "2026-06-12 21:00"
   }
 ]

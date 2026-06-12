@@ -3,11 +3,14 @@
 // =====================================
 
 document.addEventListener("DOMContentLoaded", () => {
+
     loadLeaderboard();
     loadMatches();
     loadPredictions();
     loadNextMatch();
     loadStats();
+    loadOutliers();
+
 });
 
 // =====================================
@@ -18,22 +21,34 @@ async function loadLeaderboard() {
 
     try {
 
-        const response = await fetch("leaderboard.json");
-        const players = await response.json();
+        const response =
+            await fetch("leaderboard.json");
+
+        const players =
+            await response.json();
 
         const table =
-            document.getElementById("leaderboard-body");
+            document.getElementById(
+                "leaderboard-body"
+            );
 
         if (!table) return;
 
         table.innerHTML = "";
 
-        players.forEach(player => {
+        players.forEach((player, index) => {
 
-            const row = document.createElement("tr");
+            let medal = player.placering;
+
+            if(index === 0) medal = "🥇";
+            if(index === 1) medal = "🥈";
+            if(index === 2) medal = "🥉";
+
+            const row =
+                document.createElement("tr");
 
             row.innerHTML = `
-                <td>${player.placering}</td>
+                <td>${medal}</td>
                 <td>${player.namn}</td>
                 <td>${player.poang}</td>
                 <td>${player.fulltraffar}</td>
@@ -44,10 +59,10 @@ async function loadLeaderboard() {
 
         });
 
-    } catch (error) {
+    } catch(error) {
 
         console.error(
-            "Fel vid laddning av leaderboard",
+            "Leaderboard-fel",
             error
         );
 
@@ -70,7 +85,9 @@ async function loadMatches() {
             await response.json();
 
         const container =
-            document.getElementById("matches-container");
+            document.getElementById(
+                "matches-container"
+            );
 
         if (!container) return;
 
@@ -85,7 +102,9 @@ async function loadMatches() {
 
             div.innerHTML = `
                 <strong>
-                    ${match.home} - ${match.away}
+                    ${match.home}
+                    -
+                    ${match.away}
                 </strong>
 
                 <br>
@@ -105,10 +124,10 @@ async function loadMatches() {
 
         });
 
-    } catch (error) {
+    } catch(error) {
 
         console.error(
-            "Fel vid laddning av matcher",
+            "Match-fel",
             error
         );
 
@@ -150,6 +169,10 @@ async function loadPredictions() {
             card.innerHTML = `
                 <h3>${match.name}</h3>
 
+                <small>
+                    Klicka för att visa tips
+                </small>
+
                 <div
                     id="match-${match.id}"
                     style="display:none;"
@@ -163,21 +186,20 @@ async function loadPredictions() {
                         `match-${match.id}`
                     );
 
-                if (details.style.display === "none") {
+                if(details.style.display === "none") {
 
                     details.style.display = "block";
 
-                    let html = `
-                        <table class="predictions-table">
-                    `;
+                    let html =
+                        "<table class='predictions-table'>";
 
                     match.predictions.forEach(p => {
 
                         html += `
-                            <tr>
-                                <td>${p.namn}</td>
-                                <td>${p.tips}</td>
-                            </tr>
+                        <tr>
+                            <td>${p.namn}</td>
+                            <td>${p.tips}</td>
+                        </tr>
                         `;
 
                     });
@@ -198,10 +220,10 @@ async function loadPredictions() {
 
         });
 
-    } catch (error) {
+    } catch(error) {
 
         console.error(
-            "Fel vid laddning av tips",
+            "Predictions-fel",
             error
         );
 
@@ -246,7 +268,6 @@ async function loadNextMatch() {
 
                 <p>
                     🕘 ${match.time}
-                    (${match.timezone})
                 </p>
 
                 <hr>
@@ -266,33 +287,14 @@ async function loadNextMatch() {
                     ${match.majority.awayWin}
                 </p>
 
-                <br>
-
-                <strong>
-                    Mest populära tips:
-                </strong>
-
-                <ul>
-
-                    ${match.mostCommonPredictions
-                        .map(p => `
-                            <li>
-                                ${p.result}
-                                (${p.count} st)
-                            </li>
-                        `)
-                        .join("")}
-
-                </ul>
-
             </div>
 
         `;
 
-    } catch (error) {
+    } catch(error) {
 
         console.error(
-            "Fel vid laddning av nästa match",
+            "Next Match-fel",
             error
         );
 
@@ -301,7 +303,7 @@ async function loadNextMatch() {
 }
 
 // =====================================
-// STATISTIK + AKTUELL LEDARE
+// STATISTIK
 // =====================================
 
 async function loadStats() {
@@ -314,19 +316,12 @@ async function loadStats() {
         const stats =
             await response.json();
 
-        const container =
-            document.getElementById(
-                "stats-container"
-            );
-
         const leaderContainer =
             document.getElementById(
                 "leader-container"
             );
 
-        // Aktuell ledare
-
-        if (leaderContainer) {
+        if(leaderContainer) {
 
             leaderContainer.innerHTML = `
                 <h3>
@@ -340,47 +335,21 @@ async function loadStats() {
 
         }
 
-        // Statistik
+        const container =
+            document.getElementById(
+                "stats-container"
+            );
 
         if (!container) return;
 
         container.innerHTML = `
 
             <p>
-                🥇 Ledare:
-                <strong>
-                    ${stats.leader.name}
-                </strong>
-
-                (${stats.leader.points}p)
-            </p>
-
-            <br>
-
-            <p>
-                ⚽ Flest fullträffar:
-                <strong>
-                    ${stats.mostExactResults.name}
-                </strong>
-
-                (${stats.mostExactResults.count})
-            </p>
-
-            <br>
-
-            <p>
-                🎯 Mest vågad:
-                <strong>
-                    ${stats.mostRisky.name}
-                </strong>
-            </p>
-
-            <br>
-
-            <p>
                 👥 Deltagare:
                 ${stats.participants}
             </p>
+
+            <br>
 
             <p>
                 🏟 Matcher spelade:
@@ -390,16 +359,124 @@ async function loadStats() {
             <br>
 
             <p>
-                Senast uppdaterad:
+                ⚽ Flest fullträffar:
+                ${stats.mostExactResults.name}
+                (${stats.mostExactResults.count})
+            </p>
+
+            <br>
+
+            <p>
+                🎯 Mest vågad:
+                ${stats.mostRisky.name}
+            </p>
+
+            <br>
+
+            <p>
+                🕒 Uppdaterad:
                 ${stats.lastUpdated}
             </p>
 
         `;
 
-    } catch (error) {
+    } catch(error) {
 
         console.error(
-            "Fel vid laddning av statistik",
+            "Stats-fel",
+            error
+        );
+
+    }
+
+}
+
+// =====================================
+// STICKARE 2.0
+// =====================================
+
+async function loadOutliers() {
+
+    try {
+
+        const response =
+            await fetch("predictions.json");
+
+        const data =
+            await response.json();
+
+        const container =
+            document.getElementById(
+                "outliers-container"
+            );
+
+        if (!container) return;
+
+        container.innerHTML = "";
+
+        data.matches.forEach(match => {
+
+            const counts = {};
+
+            match.predictions.forEach(p => {
+
+                counts[p.tips] =
+                    (counts[p.tips] || 0) + 1;
+
+            });
+
+            const uniqueTips =
+                Object.keys(counts)
+                .filter(
+                    tip => counts[tip] === 1
+                );
+
+            if(uniqueTips.length === 0)
+                return;
+
+            const div =
+                document.createElement("div");
+
+            div.className =
+                "stickare";
+
+            let html =
+                `<h3>${match.name}</h3>`;
+
+            uniqueTips.forEach(tip => {
+
+                const player =
+                    match.predictions.find(
+                        p => p.tips === tip
+                    );
+
+                html += `
+                    <p>
+                        🎯
+                        <strong>
+                            ${player.namn}
+                        </strong>
+
+                        är ensam om
+
+                        <strong>
+                            ${tip}
+                        </strong>
+                    </p>
+                `;
+
+            });
+
+            div.innerHTML = html;
+
+            container.appendChild(div);
+
+        });
+
+    } catch(error) {
+
+        console.error(
+            "Outlier-fel",
             error
         );
 

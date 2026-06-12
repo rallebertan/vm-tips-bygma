@@ -1,0 +1,73 @@
+[
+  {
+    "matchId": 3,
+    "home": "🇨🇦 Kanada",
+    "away": "🇧🇦 Bosnien",
+    "predictions": [
+      {
+        "player": "JOL",
+        "tip": "2-1"
+      },
+      {
+        "player": "JBM",
+        "tip": "2-1"
+      },
+      {
+        "player": "RNI",
+        "tip": "2-1"
+      },
+      {
+        "player": "TPL",
+        "tip": "2-1"
+      },
+      {
+        "player": "VVN",
+        "tip": "1-1"
+      },
+      {
+        "player": "AAI",
+        "tip": "1-1"
+      },
+      {
+        "player": "MNH",
+        "tip": "1-1"
+      },
+      {
+        "player": "PTR",
+        "tip": "1-1"
+      },
+      {
+        "player": "JSN",
+        "tip": "1-0"
+      },
+      {
+        "player": "ESM",
+        "tip": "1-0"
+      },
+      {
+        "player": "JKN",
+        "tip": "1-0"
+      },
+      {
+        "player": "NKK",
+        "tip": "2-0"
+      },
+      {
+        "player": "EHN",
+        "tip": "2-0"
+      },
+      {
+        "player": "VOH",
+        "tip": "0-1"
+      },
+      {
+        "player": "GSA",
+        "tip": "0-1"
+      },
+      {
+        "player": "KMK",
+        "tip": "2-2"
+      }
+    ]
+  }
+]

@@ -1,117 +1,29 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>🏆 VM Tips Bygma 2026</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<style>
-
-:root{
---blue:#005293;
---yellow:#FECB00;
---bg:#F4F7FB;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:var(--bg);
-}
-
-header{
-background:var(--blue);
-color:white;
-padding:20px;
-text-align:center;
-}
-
-header h1{
-font-size:28px;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-padding:15px;
-}
-
-.card{
-background:white;
-padding:20px;
-margin-bottom:15px;
-border-radius:15px;
-box-shadow:0 4px 12px rgba(0,0,0,.08);
-}
-
-.card h2{
-margin-bottom:15px;
-color:var(--blue);
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-}
-
-th{
-background:var(--yellow);
-padding:10px;
-text-align:left;
-}
-
-td{
-padding:10px;
-border-bottom:1px solid #ddd;
-}
-
-.badge{
-background:var(--yellow);
-padding:4px 10px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
-}
-
-.match{
-padding:12px;
-border:1px solid #ddd;
-border-radius:10px;
-margin-bottom:10px;
-}
-
-.stickare{
-padding:12px;
-background:#fff8d8;
-border-left:5px solid var(--yellow);
-margin-bottom:10px;
-border-radius:10px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-color:#666;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
 <header>
 
 <h1>🏆 VM Tips Bygma 2026</h1>
 
-<p>Live leaderboard</p>
+<p>Live Leaderboard & Statistik</p>
 
 </header>
 
@@ -121,7 +33,9 @@ color:#666;
 
 <h2>🥇 Aktuell ledare</h2>
 
-<h3>MNH - 4 poäng</h3>
+<p>
+MNH - 4 poäng
+</p>
 
 </div>
 
@@ -131,28 +45,21 @@ color:#666;
 
 <table>
 
+<thead>
+
 <tr>
 <th>Plac</th>
 <th>Namn</th>
 <th>Poäng</th>
+<th>Fullträffar</th>
+<th>Rätt utfall</th>
 </tr>
 
-<tr><td>1</td><td>MNH</td><td>4</td></tr>
-<tr><td>2</td><td>RNI</td><td>3</td></tr>
-<tr><td>3</td><td>PTR</td><td>3</td></tr>
-<tr><td>4</td><td>JBM</td><td>3</td></tr>
-<tr><td>5</td><td>AAI</td><td>3</td></tr>
-<tr><td>6</td><td>JKN</td><td>3</td></tr>
-<tr><td>7</td><td>ESM</td><td>3</td></tr>
-<tr><td>8</td><td>NKK</td><td>2</td></tr>
-<tr><td>9</td><td>JSN</td><td>2</td></tr>
-<tr><td>10</td><td>JOL</td><td>1</td></tr>
-<tr><td>11</td><td>KMK</td><td>1</td></tr>
-<tr><td>12</td><td>VVN</td><td>1</td></tr>
-<tr><td>13</td><td>VOH</td><td>1</td></tr>
-<tr><td>14</td><td>EHN</td><td>1</td></tr>
-<tr><td>15</td><td>GSA</td><td>1</td></tr>
-<tr><td>16</td><td>TPL</td><td>1</td></tr>
+</thead>
+
+<tbody id="leaderboard-body">
+
+</tbody>
 
 </table>
 
@@ -160,14 +67,12 @@ color:#666;
 
 <div class="card">
 
-<h2>⚽ Senaste resultat</h2>
+<h2>⚽ Matcher</h2>
 
-<div class="match">
-🇲🇽 Mexiko 2–0 Sydafrika 🇿🇦
-</div>
+<div id="matches-container">
 
-<div class="match">
-🇰🇷 Sydkorea 2–1 Tjeckien 🇨🇿
+Laddar matcher...
+
 </div>
 
 </div>
@@ -178,15 +83,21 @@ color:#666;
 
 <div class="match">
 
-🇨🇦 Kanada – Bosnien 🇧🇦
+🇨🇦 Kanada – 🇧🇦 Bosnien
 
 <br><br>
 
-<span class="badge">Kanada 9 tips</span>
+<span class="badge">
+Kanadavinst: 9
+</span>
 
-<span class="badge">Kryss 5 tips</span>
+<span class="badge">
+Kryss: 5
+</span>
 
-<span class="badge">Bosnien 2 tips</span>
+<span class="badge">
+Bosnienvinst: 2
+</span>
 
 </div>
 
@@ -222,9 +133,9 @@ GSA tror Bosnien vinner
 
 <p>🥇 Mest poäng: MNH</p>
 
-<p>🎯 Mest vågad: KMK</p>
-
 <p>⚽ Flest fullträffar: MNH</p>
+
+<p>🎯 Mest vågad: KMK</p>
 
 </div>
 
@@ -236,5 +147,8 @@ VM Tips Bygma 2026
 
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+
 </html>

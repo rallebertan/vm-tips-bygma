@@ -1,6 +1,6 @@
-// =========================
+// =====================================
 // VM Tips Bygma 2026
-// =========================
+// =====================================
 
 document.addEventListener("DOMContentLoaded", () => {
     loadLeaderboard();
@@ -10,17 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
     loadStats();
 });
 
-// =========================
+// =====================================
 // LEADERBOARD
-// =========================
+// =====================================
 
 async function loadLeaderboard() {
+
     try {
 
-        const response = await fetch("leaderboard.json");
-        const players = await response.json();
+        const response =
+            await fetch("leaderboard.json");
 
-        const table = document.getElementById("leaderboard-body");
+        const players =
+            await response.json();
+
+        const table =
+            document.getElementById("leaderboard-body");
 
         if (!table) return;
 
@@ -28,7 +33,8 @@ async function loadLeaderboard() {
 
         players.forEach(player => {
 
-            const row = document.createElement("tr");
+            const row =
+                document.createElement("tr");
 
             row.innerHTML = `
                 <td>${player.placering}</td>
@@ -42,21 +48,30 @@ async function loadLeaderboard() {
 
         });
 
-    } catch (error) {
-        console.error("Leaderboard-fel:", error);
+    } catch(error) {
+
+        console.error(
+            "Fel vid laddning av leaderboard",
+            error
+        );
+
     }
+
 }
 
-// =========================
+// =====================================
 // MATCHER
-// =========================
+// =====================================
 
 async function loadMatches() {
 
     try {
 
-        const response = await fetch("matches.json");
-        const matches = await response.json();
+        const response =
+            await fetch("matches.json");
+
+        const matches =
+            await response.json();
 
         const container =
             document.getElementById("matches-container");
@@ -67,14 +82,28 @@ async function loadMatches() {
 
         matches.forEach(match => {
 
-            const div = document.createElement("div");
+            const div =
+                document.createElement("div");
 
             div.className = "match";
 
             div.innerHTML = `
-                <strong>${match.home} - ${match.away}</strong><br>
-                📅 ${match.date}<br>
-                📊 ${match.status}<br>
+                <strong>
+                    ${match.home}
+                    -
+                    ${match.away}
+                </strong>
+
+                <br>
+
+                📅 ${match.date}
+
+                <br>
+
+                📊 ${match.status}
+
+                <br>
+
                 ⚽ ${match.result ?? "-"}
             `;
 
@@ -82,15 +111,20 @@ async function loadMatches() {
 
         });
 
-    } catch (error) {
-        console.error("Match-fel:", error);
+    } catch(error) {
+
+        console.error(
+            "Fel vid laddning av matcher",
+            error
+        );
+
     }
 
 }
 
-// =========================
+// =====================================
 // ALLAS TIPS
-// =========================
+// =====================================
 
 async function loadPredictions() {
 
@@ -99,52 +133,93 @@ async function loadPredictions() {
         const response =
             await fetch("predictions.json");
 
-        const data = await response.json();
+        const data =
+            await response.json();
 
         const container =
-            document.getElementById("predictions-container");
+            document.getElementById(
+                "predictions-container"
+            );
 
         if (!container) return;
 
         container.innerHTML = "";
 
-        Object.keys(data).forEach(matchName => {
+        data.matches.forEach(match => {
 
-            const card = document.createElement("div");
+            const card =
+                document.createElement("div");
 
-            card.className = "match";
+            card.className =
+                "match match-card";
 
-            let html =
-                `<h3>👀 ${matchName}</h3>`;
+            card.innerHTML = `
+                <h3>${match.name}</h3>
 
-            data[matchName].forEach(prediction => {
+                <div
+                    id="match-${match.id}"
+                    style="display:none;"
+                ></div>
+            `;
 
-                html += `
-                    <p>
-                    <strong>${prediction.namn}</strong>
-                    → ${prediction.tips}
-                    </p>
-                `;
+            card.addEventListener("click", () => {
+
+                const details =
+                    document.getElementById(
+                        `match-${match.id}`
+                    );
+
+                if(details.style.display === "none") {
+
+                    details.style.display = "block";
+
+                    let html = `
+                        <table
+                            class="predictions-table"
+                        >
+                    `;
+
+                    match.predictions.forEach(p => {
+
+                        html += `
+                            <tr>
+                                <td>${p.namn}</td>
+                                <td>${p.tips}</td>
+                            </tr>
+                        `;
+
+                    });
+
+                    html += "</table>";
+
+                    details.innerHTML = html;
+
+                } else {
+
+                    details.style.display = "none";
+
+                }
 
             });
-
-            card.innerHTML = html;
 
             container.appendChild(card);
 
         });
 
-    } catch (error) {
+    } catch(error) {
 
-        console.error("Predictions-fel:", error);
+        console.error(
+            "Fel vid laddning av tips",
+            error
+        );
 
     }
 
 }
 
-// =========================
+// =====================================
 // NÄSTA MATCH
-// =========================
+// =====================================
 
 async function loadNextMatch() {
 
@@ -153,65 +228,89 @@ async function loadNextMatch() {
         const response =
             await fetch("nextmatch.json");
 
-        const nextMatch =
+        const match =
             await response.json();
 
         const container =
-            document.getElementById("next-match-container");
+            document.getElementById(
+                "next-match-container"
+            );
 
         if (!container) return;
 
         container.innerHTML = `
 
-        <div class="match">
+            <div class="match">
 
-            <h3>
-                ${nextMatch.home}
-                -
-                ${nextMatch.away}
-            </h3>
+                <h3>
+                    ${match.home}
+                    -
+                    ${match.away}
+                </h3>
 
-            <p>
-                📅 ${nextMatch.date}
-            </p>
+                <p>
+                    📅 ${match.date}
+                </p>
 
-            <p>
-                🕘 ${nextMatch.time}
-                (${nextMatch.timezone})
-            </p>
+                <p>
+                    🕘 ${match.time}
+                    (${match.timezone})
+                </p>
 
-            <hr>
+                <hr>
 
-            <p>
-                🇨🇦/🏠 Vinst:
-                ${nextMatch.majority.homeWin}
-            </p>
+                <p>
+                    🇨🇦 Hemmaseger:
+                    ${match.majority.homeWin}
+                </p>
 
-            <p>
-                🤝 Kryss:
-                ${nextMatch.majority.draw}
-            </p>
+                <p>
+                    🤝 Kryss:
+                    ${match.majority.draw}
+                </p>
 
-            <p>
-                🇧🇦/✈️ Vinst:
-                ${nextMatch.majority.awayWin}
-            </p>
+                <p>
+                    🇧🇦 Bortaseger:
+                    ${match.majority.awayWin}
+                </p>
 
-        </div>
+                <br>
+
+                <strong>
+                    Mest populära tips:
+                </strong>
+
+                <ul>
+
+                    ${match.mostCommonPredictions
+                        .map(p => `
+                            <li>
+                                ${p.result}
+                                (${p.count} st)
+                            </li>
+                        `)
+                        .join("")}
+
+                </ul>
+
+            </div>
 
         `;
 
-    } catch (error) {
+    } catch(error) {
 
-        console.error("Next Match-fel:", error);
+        console.error(
+            "Fel vid laddning av nästa match",
+            error
+        );
 
     }
 
 }
 
-// =========================
+// =====================================
 // STATISTIK
-// =========================
+// =====================================
 
 async function loadStats() {
 
@@ -224,44 +323,70 @@ async function loadStats() {
             await response.json();
 
         const container =
-            document.getElementById("stats-container");
+            document.getElementById(
+                "stats-container"
+            );
 
         if (!container) return;
 
         container.innerHTML = `
 
             <p>
-            🥇 Ledare:
-            ${stats.leader.name}
-            (${stats.leader.points}p)
+                🥇 Ledare:
+                <strong>
+                    ${stats.leader.name}
+                </strong>
+
+                (${stats.leader.points}p)
+            </p>
+
+            <br>
+
+            <p>
+                ⚽ Flest fullträffar:
+                <strong>
+                    ${stats.mostExactResults.name}
+                </strong>
+
+                (${stats.mostExactResults.count})
+            </p>
+
+            <br>
+
+            <p>
+                🎯 Mest vågad:
+                <strong>
+                    ${stats.mostRisky.name}
+                </strong>
+            </p>
+
+            <br>
+
+            <p>
+                👥 Deltagare:
+                ${stats.participants}
             </p>
 
             <p>
-            ⚽ Flest fullträffar:
-            ${stats.mostExactResults.name}
-            (${stats.mostExactResults.count})
+                🏟 Matcher spelade:
+                ${stats.matchesPlayed}
             </p>
 
-            <p>
-            🎯 Mest vågad:
-            ${stats.mostRisky.name}
-            </p>
+            <br>
 
             <p>
-            👥 Deltagare:
-            ${stats.participants}
-            </p>
-
-            <p>
-            🏟 Matcher spelade:
-            ${stats.matchesPlayed}
+                Senast uppdaterad:
+                ${stats.lastUpdated}
             </p>
 
         `;
 
-    } catch (error) {
+    } catch(error) {
 
-        console.error("Stats-fel:", error);
+        console.error(
+            "Fel vid laddning av statistik",
+            error
+        );
 
     }
 

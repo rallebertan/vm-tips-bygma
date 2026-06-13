@@ -1,43 +1,11 @@
 {
-  "home": "🇨🇦 Kanada",
-  "away": "🇧🇦 Bosnien",
-  "date": "2026-06-12",
+  "home": "🇶🇦 Qatar",
+  "away": "🇨🇭 Schweiz",
+  "date": "2026-06-13",
   "time": "21:00",
-  "timezone": "Svensk tid",
   "majority": {
-    "homeWin": 9,
-    "draw": 5,
-    "awayWin": 2
-  },
-  "mostCommonPredictions": [
-    {
-      "result": "2-1",
-      "count": 4
-    },
-    {
-      "result": "1-1",
-      "count": 4
-    },
-    {
-      "result": "1-0",
-      "count": 3
-    }
-  ],
-  "outliers": [
-    {
-      "name": "KMK",
-      "prediction": "2-2",
-      "reason": "Ensam om resultatet"
-    },
-    {
-      "name": "VOH",
-      "prediction": "0-1",
-      "reason": "Tror på Bosnien-seger"
-    },
-    {
-      "name": "GSA",
-      "prediction": "0-1",
-      "reason": "Tror på Bosnien-seger"
-    }
-  ]
+    "homeWin": "0 av 16",
+    "draw": "1 av 16",
+    "awayWin": "15 av 16"
+  }
 }

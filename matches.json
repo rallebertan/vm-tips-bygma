@@ -1,26 +1,51 @@
 [
   {
-    "id": 1,
     "home": "🇲🇽 Mexiko",
     "away": "🇿🇦 Sydafrika",
-    "result": "2-0",
-    "status": "slut",
-    "date": "2026-06-11 21:00"
+    "date": "2026-06-11",
+    "status": "Slut",
+    "result": "2-0"
   },
   {
-    "id": 2,
     "home": "🇰🇷 Sydkorea",
     "away": "🇨🇿 Tjeckien",
-    "result": "2-1",
-    "status": "slut",
-    "date": "2026-06-12 04:00"
+    "date": "2026-06-12",
+    "status": "Slut",
+    "result": "2-1"
   },
   {
-    "id": 3,
-  "home": "🇨🇦 Kanada",
-  "away": "🇧🇦 Bosnien",
-  "result": "0-1"
-    "status": "LIVE",
-    "date": "2026-06-12 21:00"
+    "home": "🇨🇦 Kanada",
+    "away": "🇧🇦 Bosnien och Hercegovina",
+    "date": "2026-06-12",
+    "status": "Slut",
+    "result": "1-1"
+  },
+  {
+    "home": "🇺🇸 USA",
+    "away": "🇵🇾 Paraguay",
+    "date": "2026-06-13",
+    "status": "Slut",
+    "result": "4-1"
+  },
+  {
+    "home": "🇶🇦 Qatar",
+    "away": "🇨🇭 Schweiz",
+    "date": "2026-06-13",
+    "status": "Kommande",
+    "result": ""
+  },
+  {
+    "home": "🇧🇷 Brasilien",
+    "away": "🇲🇦 Marocko",
+    "date": "2026-06-14",
+    "status": "Kommande",
+    "result": ""
+  },
+  {
+    "home": "🇭🇹 Haiti",
+    "away": "🏴 Skottland",
+    "date": "2026-06-14",
+    "status": "Kommande",
+    "result": ""
   }
 ]

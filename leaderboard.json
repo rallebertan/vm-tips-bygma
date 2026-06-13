@@ -2,111 +2,111 @@
   {
     "placering": 1,
     "namn": "MNH",
+    "poang": 8,
+    "fulltraffar": 2,
+    "rattUtfall": 2
+  },
+  {
+    "placering": 2,
+    "namn": "AAI",
+    "poang": 7,
+    "fulltraffar": 2,
+    "rattUtfall": 1
+  },
+  {
+    "placering": 3,
+    "namn": "PTR",
+    "poang": 6,
+    "fulltraffar": 2,
+    "rattUtfall": 0
+  },
+  {
+    "placering": 4,
+    "namn": "VVN",
+    "poang": 5,
+    "fulltraffar": 1,
+    "rattUtfall": 2
+  },
+  {
+    "placering": 5,
+    "namn": "ESM",
     "poang": 4,
     "fulltraffar": 1,
     "rattUtfall": 1
   },
   {
-    "placering": 2,
-    "namn": "RNI",
-    "poang": 3,
-    "fulltraffar": 1,
-    "rattUtfall": 0
-  },
-  {
-    "placering": 2,
-    "namn": "PTR",
-    "poang": 3,
-    "fulltraffar": 1,
-    "rattUtfall": 0
-  },
-  {
-    "placering": 2,
-    "namn": "JKN",
-    "poang": 3,
-    "fulltraffar": 1,
-    "rattUtfall": 0
-  },
-  {
-    "placering": 2,
+    "placering": 6,
     "namn": "JBM",
-    "poang": 3,
+    "poang": 4,
     "fulltraffar": 1,
-    "rattUtfall": 0
+    "rattUtfall": 1
   },
   {
-    "placering": 2,
-    "namn": "ESM",
-    "poang": 3,
+    "placering": 7,
+    "namn": "JKN",
+    "poang": 4,
     "fulltraffar": 1,
-    "rattUtfall": 0
-  },
-  {
-    "placering": 2,
-    "namn": "AAI",
-    "poang": 3,
-    "fulltraffar": 1,
-    "rattUtfall": 0
+    "rattUtfall": 1
   },
   {
     "placering": 8,
+    "namn": "RNI",
+    "poang": 4,
+    "fulltraffar": 1,
+    "rattUtfall": 1
+  },
+  {
+    "placering": 9,
+    "namn": "JSN",
+    "poang": 3,
+    "fulltraffar": 0,
+    "rattUtfall": 3
+  },
+  {
+    "placering": 10,
+    "namn": "EHN",
+    "poang": 2,
+    "fulltraffar": 0,
+    "rattUtfall": 2
+  },
+  {
+    "placering": 11,
+    "namn": "GSA",
+    "poang": 2,
+    "fulltraffar": 0,
+    "rattUtfall": 2
+  },
+  {
+    "placering": 12,
+    "namn": "KMK",
+    "poang": 2,
+    "fulltraffar": 0,
+    "rattUtfall": 2
+  },
+  {
+    "placering": 13,
     "namn": "NKK",
     "poang": 2,
     "fulltraffar": 0,
     "rattUtfall": 2
   },
   {
-    "placering": 8,
-    "namn": "JSN",
+    "placering": 14,
+    "namn": "TPL",
     "poang": 2,
     "fulltraffar": 0,
     "rattUtfall": 2
   },
   {
-    "placering": 10,
-    "namn": "VVN",
-    "poang": 1,
-    "fulltraffar": 0,
-    "rattUtfall": 1
-  },
-  {
-    "placering": 10,
-    "namn": "VOH",
-    "poang": 1,
-    "fulltraffar": 0,
-    "rattUtfall": 1
-  },
-  {
-    "placering": 10,
-    "namn": "TPL",
-    "poang": 1,
-    "fulltraffar": 0,
-    "rattUtfall": 1
-  },
-  {
-    "placering": 10,
-    "namn": "KMK",
-    "poang": 1,
-    "fulltraffar": 0,
-    "rattUtfall": 1
-  },
-  {
-    "placering": 10,
+    "placering": 15,
     "namn": "JOL",
     "poang": 1,
     "fulltraffar": 0,
     "rattUtfall": 1
   },
   {
-    "placering": 10,
-    "namn": "GSA",
-    "poang": 1,
-    "fulltraffar": 0,
-    "rattUtfall": 1
-  },
-  {
-    "placering": 10,
-    "namn": "EHN",
+    "placering": 16,
+    "namn": "VOH",
     "poang": 1,
     "fulltraffar": 0,
     "rattUtfall": 1

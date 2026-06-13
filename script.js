@@ -518,13 +518,3 @@ async function loadOutliers() {
     }
 
 }
-async function testGoogleSheet() {
-
-  const csv =
-    await fetchSheet(GIDS.resultat);
-
-  console.log(csv);
-
-}
-
-testGoogleSheet();

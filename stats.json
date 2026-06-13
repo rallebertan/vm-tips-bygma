@@ -1,45 +1,49 @@
 {
-  "lastUpdated": "2026-06-12 08:00",
+  "lastUpdated": "2026-06-14 01:00",
   "leader": {
     "name": "MNH",
-    "points": 4
+    "points": 8
   },
   "mostExactResults": {
     "name": "MNH",
-    "count": 1
+    "count": 2
   },
   "mostCorrectOutcomes": {
-    "name": "NKK",
-    "count": 2
+    "name": "JSN",
+    "count": 3
   },
   "mostRisky": {
     "name": "KMK",
     "reason": "Ensam om 2-2"
   },
-  "matchesPlayed": 2,
+  "matchesPlayed": 4,
   "participants": 16,
   "topScorers": [
     {
       "name": "MNH",
-      "points": 4
+      "points": 8
     },
     {
-      "name": "RNI",
-      "points": 3
+      "name": "AAI",
+      "points": 7
     },
     {
       "name": "PTR",
-      "points": 3
+      "points": 6
     }
   ],
   "biggestMovers": [
     {
       "name": "MNH",
+      "change": "+4"
+    },
+    {
+      "name": "VVN",
       "change": "+3"
     },
     {
-      "name": "NKK",
-      "change": "+2"
+      "name": "AAI",
+      "change": "+3"
     }
   ]
 }

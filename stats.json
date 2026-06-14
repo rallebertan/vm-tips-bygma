@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-06-14 12:00",
+  "lastUpdated": "2026-06-14",
   "leader": {
     "name": "AAI",
-    "points": 11
+    "points": 12
   },
   "mostExactResults": {
     "name": "AAI",
@@ -10,40 +10,11 @@
   },
   "mostCorrectOutcomes": {
     "name": "JSN",
-    "count": 5
+    "count": 6
   },
   "mostRisky": {
-    "name": "KMK",
-    "reason": "Flest ensam-tips hittills"
+    "name": "PTR"
   },
-  "matchesPlayed": 7,
-  "participants": 16,
-  "topScorers": [
-    {
-      "name": "AAI",
-      "points": 11
-    },
-    {
-      "name": "MNH",
-      "points": 9
-    },
-    {
-      "name": "JSN",
-      "points": 8
-    }
-  ],
-  "biggestMovers": [
-    {
-      "name": "AAI",
-      "change": "+4"
-    },
-    {
-      "name": "JSN",
-      "change": "+5"
-    },
-    {
-      "name": "VVN",
-      "change": "+2"
-    }
-  ]
+  "matchesPlayed": 9,
+  "participants": 16
 }

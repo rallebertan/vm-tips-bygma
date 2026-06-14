@@ -1,70 +1,22 @@
 {
-"matches": [
-{
-"id": 1,
-"name": "🇶🇦 Qatar - 🇨🇭 Schweiz",
-"predictions": [
-{ "namn": "JOL", "tips": "0-3" },
-{ "namn": "NKK", "tips": "0-3" },
-{ "namn": "KMK", "tips": "0-2" },
-{ "namn": "VVN", "tips": "0-3" },
-{ "namn": "JSN", "tips": "1-1" },
-{ "namn": "VOH", "tips": "0-2" },
-{ "namn": "JBM", "tips": "1-2" },
-{ "namn": "EHN", "tips": "0-2" },
-{ "namn": "ESM", "tips": "0-3" },
-{ "namn": "JKN", "tips": "0-1" },
-{ "namn": "RNI", "tips": "0-2" },
-{ "namn": "GSA", "tips": "0-3" },
-{ "namn": "TPL", "tips": "0-2" },
-{ "namn": "AAI", "tips": "0-2" },
-{ "namn": "MNH", "tips": "0-3" },
-{ "namn": "PTR", "tips": "1-4" }
-]
-},
-{
-"id": 2,
-"name": "🇧🇷 Brasilien - 🇲🇦 Marocko",
-"predictions": [
-{ "namn": "JOL", "tips": "2-2" },
-{ "namn": "NKK", "tips": "2-1" },
-{ "namn": "KMK", "tips": "3-2" },
-{ "namn": "VVN", "tips": "2-2" },
-{ "namn": "JSN", "tips": "2-2" },
-{ "namn": "VOH", "tips": "3-1" },
-{ "namn": "JBM", "tips": "1-2" },
-{ "namn": "EHN", "tips": "2-1" },
-{ "namn": "ESM", "tips": "2-1" },
-{ "namn": "JKN", "tips": "3-0" },
-{ "namn": "RNI", "tips": "2-1" },
-{ "namn": "GSA", "tips": "1-1" },
-{ "namn": "TPL", "tips": "2-1" },
-{ "namn": "AAI", "tips": "1-1" },
-{ "namn": "MNH", "tips": "3-1" },
-{ "namn": "PTR", "tips": "2-1" }
-]
-},
-{
-"id": 3,
-"name": "🇭🇹 Haiti - 🏴 Skottland",
-"predictions": [
-{ "namn": "JOL", "tips": "0-4" },
-{ "namn": "NKK", "tips": "0-3" },
-{ "namn": "KMK", "tips": "2-0" },
-{ "namn": "VVN", "tips": "0-2" },
-{ "namn": "JSN", "tips": "0-4" },
-{ "namn": "VOH", "tips": "0-2" },
-{ "namn": "JBM", "tips": "0-3" },
-{ "namn": "EHN", "tips": "0-3" },
-{ "namn": "ESM", "tips": "0-4" },
-{ "namn": "JKN", "tips": "1-3" },
-{ "namn": "RNI", "tips": "1-2" },
-{ "namn": "GSA", "tips": "0-2" },
-{ "namn": "TPL", "tips": "0-2" },
-{ "namn": "AAI", "tips": "0-3" },
-{ "namn": "MNH", "tips": "0-3" },
-{ "namn": "PTR", "tips": "0-0" }
-]
-}
-]
+  "id": 1,
+  "name": "🇩🇪 Tyskland - 🇨🇼 Curacao",
+  "predictions": [
+    { "namn": "JOL", "tips": "6-0" },
+    { "namn": "NKK", "tips": "5-0" },
+    { "namn": "KMK", "tips": "3-0" },
+    { "namn": "VVN", "tips": "5-0" },
+    { "namn": "JSN", "tips": "6-1" },
+    { "namn": "VOH", "tips": "4-0" },
+    { "namn": "JBM", "tips": "5-0" },
+    { "namn": "EHN", "tips": "5-0" },
+    { "namn": "ESM", "tips": "6-0" },
+    { "namn": "JKN", "tips": "4-0" },
+    { "namn": "RNI", "tips": "4-0" },
+    { "namn": "GSA", "tips": "4-0" },
+    { "namn": "TPL", "tips": "4-0" },
+    { "namn": "AAI", "tips": "5-0" },
+    { "namn": "MNH", "tips": "6-0" },
+    { "namn": "PTR", "tips": "7-1" }
+  ]
 }

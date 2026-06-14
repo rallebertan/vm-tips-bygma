@@ -1,11 +1,11 @@
 {
-  "home": "🇶🇦 Qatar",
-  "away": "🇨🇭 Schweiz",
-  "date": "2026-06-13",
-  "time": "21:00",
+  "home": "🇩🇪 Tyskland",
+  "away": "🇨🇼 Curacao",
+  "date": "2026-06-14",
+  "time": "19:00",
   "majority": {
-    "homeWin": "0 av 16",
-    "draw": "1 av 16",
-    "awayWin": "15 av 16"
+    "homeWin": "16 av 16",
+    "draw": "0 av 16",
+    "awayWin": "0 av 16"
   }
 }

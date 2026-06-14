@@ -1,11 +1,11 @@
 {
-  "home": "🇩🇪 Tyskland",
-  "away": "🇨🇼 Curacao",
+  "home": "🇳🇱 Nederländerna",
+  "away": "🇯🇵 Japan",
   "date": "2026-06-14",
-  "time": "19:00",
+  "time": "22:00",
   "majority": {
-    "homeWin": "16 av 16",
-    "draw": "0 av 16",
-    "awayWin": "0 av 16"
+    "homeWin": "12 av 16",
+    "draw": "3 av 16",
+    "awayWin": "1 av 16"
   }
 }

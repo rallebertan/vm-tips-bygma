@@ -31,21 +31,28 @@
     "home": "🇶🇦 Qatar",
     "away": "🇨🇭 Schweiz",
     "date": "2026-06-13",
-    "status": "Kommande",
-    "result": ""
+    "status": "Slut",
+    "result": "1-1"
   },
   {
     "home": "🇧🇷 Brasilien",
     "away": "🇲🇦 Marocko",
-    "date": "2026-06-14",
-    "status": "Kommande",
-    "result": ""
+    "date": "2026-06-13",
+    "status": "Slut",
+    "result": "1-1"
   },
   {
     "home": "🇭🇹 Haiti",
     "away": "🏴 Skottland",
+    "date": "2026-06-13",
+    "status": "Slut",
+    "result": "0-1"
+  },
+  {
+    "home": "🇦🇺 Australien",
+    "away": "🇹🇷 Turkiet",
     "date": "2026-06-14",
-    "status": "Kommande",
-    "result": ""
+    "status": "Pågår",
+    "result": "1-0"
   }
 ]

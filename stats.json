@@ -1,49 +1,49 @@
 {
-  "lastUpdated": "2026-06-14 01:00",
+  "lastUpdated": "2026-06-14 12:00",
   "leader": {
-    "name": "MNH",
-    "points": 8
+    "name": "AAI",
+    "points": 11
   },
   "mostExactResults": {
-    "name": "MNH",
-    "count": 2
+    "name": "AAI",
+    "count": 3
   },
   "mostCorrectOutcomes": {
     "name": "JSN",
-    "count": 3
+    "count": 5
   },
   "mostRisky": {
     "name": "KMK",
-    "reason": "Ensam om 2-2"
+    "reason": "Flest ensam-tips hittills"
   },
-  "matchesPlayed": 4,
+  "matchesPlayed": 7,
   "participants": 16,
   "topScorers": [
     {
-      "name": "MNH",
-      "points": 8
-    },
-    {
       "name": "AAI",
-      "points": 7
+      "points": 11
     },
     {
-      "name": "PTR",
-      "points": 6
+      "name": "MNH",
+      "points": 9
+    },
+    {
+      "name": "JSN",
+      "points": 8
     }
   ],
   "biggestMovers": [
     {
-      "name": "MNH",
+      "name": "AAI",
       "change": "+4"
     },
     {
-      "name": "VVN",
-      "change": "+3"
+      "name": "JSN",
+      "change": "+5"
     },
     {
-      "name": "AAI",
-      "change": "+3"
+      "name": "VVN",
+      "change": "+2"
     }
   ]
 }

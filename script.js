@@ -90,48 +90,93 @@ async function loadEverything() {
 
         }
 
-        // LEADERBOARD
-        const leaderboard =
-            document.getElementById(
-                "leaderboard-body"
-            );
+       // LEADERBOARD
+const leaderboard =
+    document.getElementById(
+        "leaderboard-body"
+    );
 
-        if (leaderboard) {
+if (leaderboard) {
 
-            leaderboard.innerHTML = "";
+    leaderboard.innerHTML = "";
 
-            Object.keys(data)
-                .filter(
-                    x => x !== "Resultat"
-                )
-                .forEach(
-                    (
-                        player,
-                        index
-                    ) => {
+    const standings = [];
 
-                        const row =
-                            document.createElement(
-                                "tr"
-                            );
+    Object.keys(data)
+        .filter(name => name !== "Resultat")
+        .forEach(player => {
 
-                        row.innerHTML = `
-                            <td>${index + 1}</td>
-                            <td>${player}</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                        `;
+            const sheet = data[player];
 
-                        leaderboard.appendChild(
-                            row
-                        );
+            let total = 0;
+            let fullträffar = 0;
+            let rättUtfall = 0;
 
-                    }
-                );
+            sheet.forEach(row => {
+
+                const points =
+                    parseInt(row[9]) || 0;
+
+                total += points;
+
+                if (points === 3)
+                    fullträffar++;
+
+                if (points === 1)
+                    rättUtfall++;
+
+            });
+
+            standings.push({
+                player,
+                total,
+                fullträffar,
+                rättUtfall
+            });
+
+        });
+
+    standings.sort(
+        (a, b) =>
+            b.total - a.total
+    );
+
+    standings.forEach(
+        (player, index) => {
+
+            const row =
+                document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${player.player}</td>
+                <td>${player.total}</td>
+                <td>${player.fullträffar}</td>
+                <td>${player.rättUtfall}</td>
+            `;
+
+            leaderboard.appendChild(row);
 
         }
+    );
 
+    // AKTUELL LEDARE
+    if (standings.length > 0) {
+
+        const leader =
+            document.getElementById(
+                "leader-container"
+            );
+
+        leader.innerHTML = `
+            <h3>${standings[0].player}</h3>
+            <p>${standings[0].total} poäng</p>
+            <p>${standings[0].fullträffar} fullträffar</p>
+        `;
+
+    }
+
+}
         // NÄSTA MATCH
         const next =
             document.getElementById(

@@ -136,10 +136,19 @@ if (leaderboard) {
 
         });
 
-    standings.sort(
-        (a, b) =>
-            b.total - a.total
-    );
+standings.sort((a, b) => {
+
+    if (b.total !== a.total) {
+        return b.total - a.total;
+    }
+
+    if (b.fullträffar !== a.fullträffar) {
+        return b.fullträffar - a.fullträffar;
+    }
+
+    return b.rättUtfall - a.rättUtfall;
+
+});
 
     standings.forEach(
         (player, index) => {

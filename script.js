@@ -261,7 +261,8 @@ if (sweden && data.Resultat) {
 
     let html = "";
 
-    // Senaste Sverige-match
+    // SENASTE MATCH
+
     const played =
         swedenMatches.filter(
             row => row[7]
@@ -274,21 +275,17 @@ if (sweden && data.Resultat) {
 
         html += `
             <div class="match">
-                <strong>
-                    Senaste match
-                </strong>
+                <strong>🇸🇪 Senaste match</strong>
                 <br>
-                ${latest[3]}
-                -
-                ${latest[5]}
+                ${latest[3]} - ${latest[5]}
                 <br>
-                Resultat:
-                ${latest[7]}
+                Resultat: ${latest[7]}
             </div>
         `;
     }
 
-    // Nästa Sverige-match
+    // NÄSTA MATCH
+
     const upcoming =
         swedenMatches.find(
             row => !row[7]
@@ -298,35 +295,29 @@ if (sweden && data.Resultat) {
 
         html += `
             <div class="match">
-                <strong>
-                    Nästa Sverige-match
-                </strong>
+                <strong>📅 Nästa match</strong>
                 <br>
-                ${upcoming[3]}
-                -
-                ${upcoming[5]}
+                ${upcoming[3]} - ${upcoming[5]}
                 <br>
-                📅 ${upcoming[2]}
+                ${upcoming[2]}
             </div>
         `;
     }
 
-    // Alla Sveriges tips
-    if (upcoming) {
+    // SVERIGE-TIPS
 
-        html += `
-            <div class="match">
-                <strong>
-                    Allas Sverige-tips
-                </strong>
-                <br><br>
-        `;
+    if (upcoming) {
 
         const matchIndex =
             data.Resultat.findIndex(
-                row =>
-                    row === upcoming
+                row => row === upcoming
             );
+
+        html += `
+            <div class="match">
+                <strong>⚽ Allas Sverige-tips</strong>
+                <br><br>
+        `;
 
         Object.keys(data)
             .filter(
@@ -339,8 +330,7 @@ if (sweden && data.Resultat) {
 
                 html += `
                     <div>
-                        ${player} :
-                        ${tip || "-"}
+                        ${player}: ${tip || "-"}
                     </div>
                 `;
 
@@ -350,6 +340,128 @@ if (sweden && data.Resultat) {
             </div>
         `;
     }
+
+    // HUR LÅNGT GÅR SVERIGE?
+
+    const sverigeResa = {};
+
+    Object.keys(data)
+        .filter(
+            x => x !== "Resultat"
+        )
+        .forEach(player => {
+
+            const rows =
+                data[player];
+
+            const row =
+                rows.find(
+                    r =>
+                        r[2] ===
+                        "Hur långt går Sverige?"
+                );
+
+            const value =
+                row?.[5];
+
+            if (!value) return;
+
+            sverigeResa[value] =
+                (sverigeResa[value] || 0) + 1;
+
+        });
+
+    html += `
+        <div class="match">
+            <strong>
+                🇸🇪 Hur långt går Sverige?
+            </strong>
+            <br><br>
+    `;
+
+    Object.entries(
+        sverigeResa
+    )
+        .sort(
+            (a, b) =>
+                b[1] - a[1]
+        )
+        .forEach(item => {
+
+            html += `
+                <div>
+                    ${item[0]}
+                    :
+                    ${item[1]} st
+                </div>
+            `;
+
+        });
+
+    html += `
+        </div>
+    `;
+
+    // SKYTTEKUNG
+
+    const skyttekung = {};
+
+    Object.keys(data)
+        .filter(
+            x => x !== "Resultat"
+        )
+        .forEach(player => {
+
+            const rows =
+                data[player];
+
+            const row =
+                rows.find(
+                    r =>
+                        r[2] ===
+                        "Sveriges skyttekung"
+                );
+
+            const value =
+                row?.[5];
+
+            if (!value) return;
+
+            skyttekung[value] =
+                (skyttekung[value] || 0) + 1;
+
+        });
+
+    html += `
+        <div class="match">
+            <strong>
+                👟 Sveriges skyttekung
+            </strong>
+            <br><br>
+    `;
+
+    Object.entries(
+        skyttekung
+    )
+        .sort(
+            (a, b) =>
+                b[1] - a[1]
+        )
+        .forEach(item => {
+
+            html += `
+                <div>
+                    ${item[0]}
+                    :
+                    ${item[1]} tips
+                </div>
+            `;
+
+        });
+
+    html += `
+        </div>
+    `;
 
     sweden.innerHTML = html;
 

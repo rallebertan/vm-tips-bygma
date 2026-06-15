@@ -1,3 +1,5 @@
+alert("SCRIPT STARTAR");
+
 const API_URL =
 "https://script.google.com/macros/s/AKfycbx3wjNsKzmqNAvlIjmZxFDr11BLtYqqqCCvOlNR07FUc_ExG0SmfEh7YFi1lcB0FAeg/exec";
 

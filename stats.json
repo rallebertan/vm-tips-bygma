@@ -1,20 +1,20 @@
 {
-  "lastUpdated": "2026-06-14",
+  "lastUpdated": "2026-06-15",
   "leader": {
     "name": "AAI",
-    "points": 12
+    "points": 13
   },
   "mostExactResults": {
     "name": "AAI",
     "count": 3
   },
   "mostCorrectOutcomes": {
-    "name": "JSN",
-    "count": 6
+    "name": "VVN",
+    "count": 8
   },
   "mostRisky": {
     "name": "PTR"
   },
-  "matchesPlayed": 9,
+  "matchesPlayed": 12,
   "participants": 16
 }

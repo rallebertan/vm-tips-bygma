@@ -24,18 +24,20 @@ const GIDS = {
   ptr: "958120002"
 };
 
-async function fetchSheet(gid) {
+const SHEET_URL =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR-ViW46nVqodnegEWOR0U3PacpwvcRPGvXwapKp3z1qvm2zebW8OUZP7aYhi9_2Q/pub?output=csv";
 
-  const url =
-    `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
+async function fetchSheet() {
 
-  const response =
-    await fetch(url);
+    const response =
+        await fetch(
+            SHEET_URL +
+            "&t=" +
+            Date.now()
+        );
 
-  const text =
-    await response.text();
+    return await response.text();
 
-  return text;
 }
 document.addEventListener("DOMContentLoaded", () => {
 

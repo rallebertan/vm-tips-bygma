@@ -56,7 +56,11 @@ async function loadEverything() {
 
             matchesContainer.innerHTML = "";
 
-            data.Resultat.forEach(row => {
+            data.Resultat
+    .filter(row => row[7])
+    .slice(-10)
+    .reverse()
+    .forEach(row => {
 
                 if (
                     !row[3] ||

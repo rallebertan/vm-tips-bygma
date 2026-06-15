@@ -236,18 +236,81 @@ if (next && data.Resultat) {
 
 }
         // PREDICTIONS
-        const predictions =
-            document.getElementById(
-                "predictions-container"
+// ALLAS TIPS
+
+const predictions =
+    document.getElementById(
+        "predictions-container"
+    );
+
+if (predictions && data.Resultat) {
+
+    predictions.innerHTML = "";
+
+    const nextMatchIndex =
+        data.Resultat.findIndex(row => {
+
+            const home = row[3];
+            const away = row[5];
+            const result = row[7];
+
+            return (
+                home &&
+                away &&
+                !result
             );
 
-        if (predictions) {
+        });
 
-            predictions.innerHTML = `
-                Tips laddas från Google Sheets
-            `;
+    if (nextMatchIndex > -1) {
 
-        }
+        const match =
+            data.Resultat[nextMatchIndex];
+
+        let html = `
+            <div class="match">
+
+                <strong>
+                    ${match[3]}
+                    -
+                    ${match[5]}
+                </strong>
+
+                <br><br>
+        `;
+
+        Object.keys(data)
+            .filter(
+                x => x !== "Resultat"
+            )
+            .forEach(player => {
+
+                const tip =
+                    data[player][nextMatchIndex];
+
+                html += `
+                    <div>
+
+                        <strong>
+                            ${player}
+                        </strong>
+
+                        :
+                        ${tip?.[7] || "-"}
+
+                    </div>
+                `;
+
+            });
+
+        html += "</div>";
+
+        predictions.innerHTML =
+            html;
+
+    }
+
+}
 
         // STATS
         const stats =

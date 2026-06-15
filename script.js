@@ -312,22 +312,44 @@ if (predictions && data.Resultat) {
 
 }
 
-        // STATS
-        const stats =
-            document.getElementById(
-                "stats-container"
-            );
+       // STATISTIK
 
-        if (stats) {
+const stats =
+    document.getElementById(
+        "stats-container"
+    );
 
-            stats.innerHTML = `
-                <p>
-                    API anslutet ✅
-                </p>
-            `;
+if (stats) {
 
-        }
+    const standingsCount =
+        Object.keys(data)
+            .filter(
+                x => x !== "Resultat"
+            ).length;
 
+    const matchesPlayed =
+        data.Resultat.filter(
+            row => row[7]
+        ).length;
+
+    stats.innerHTML = `
+        <p>
+            👥 Deltagare:
+            ${standingsCount}
+        </p>
+
+        <p>
+            ⚽ Matcher spelade:
+            ${matchesPlayed}
+        </p>
+
+        <p>
+            🔄 Uppdateras:
+            var 30:e sekund
+        </p>
+    `;
+
+}
       // STICKARE
 
 const outliers =

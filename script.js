@@ -235,6 +235,125 @@ if (next && data.Resultat) {
     }
 
 }
+// =====================================
+// SVERIGE-SPECIAL
+// =====================================
+
+const sweden =
+    document.getElementById(
+        "sweden-container"
+    );
+
+if (sweden && data.Resultat) {
+
+    const swedenMatches =
+        data.Resultat.filter(row => {
+
+            const home = row[3];
+            const away = row[5];
+
+            return (
+                home === "Sverige" ||
+                away === "Sverige"
+            );
+
+        });
+
+    let html = "";
+
+    // Senaste Sverige-match
+    const played =
+        swedenMatches.filter(
+            row => row[7]
+        );
+
+    if (played.length > 0) {
+
+        const latest =
+            played[played.length - 1];
+
+        html += `
+            <div class="match">
+                <strong>
+                    Senaste match
+                </strong>
+                <br>
+                ${latest[3]}
+                -
+                ${latest[5]}
+                <br>
+                Resultat:
+                ${latest[7]}
+            </div>
+        `;
+    }
+
+    // Nästa Sverige-match
+    const upcoming =
+        swedenMatches.find(
+            row => !row[7]
+        );
+
+    if (upcoming) {
+
+        html += `
+            <div class="match">
+                <strong>
+                    Nästa Sverige-match
+                </strong>
+                <br>
+                ${upcoming[3]}
+                -
+                ${upcoming[5]}
+                <br>
+                📅 ${upcoming[2]}
+            </div>
+        `;
+    }
+
+    // Alla Sveriges tips
+    if (upcoming) {
+
+        html += `
+            <div class="match">
+                <strong>
+                    Allas Sverige-tips
+                </strong>
+                <br><br>
+        `;
+
+        const matchIndex =
+            data.Resultat.findIndex(
+                row =>
+                    row === upcoming
+            );
+
+        Object.keys(data)
+            .filter(
+                x => x !== "Resultat"
+            )
+            .forEach(player => {
+
+                const tip =
+                    data[player][matchIndex]?.[7];
+
+                html += `
+                    <div>
+                        ${player} :
+                        ${tip || "-"}
+                    </div>
+                `;
+
+            });
+
+        html += `
+            </div>
+        `;
+    }
+
+    sweden.innerHTML = html;
+
+}
         // PREDICTIONS
 // ALLAS TIPS
 

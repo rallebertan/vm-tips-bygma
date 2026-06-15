@@ -186,22 +186,51 @@ standings.sort((a, b) => {
     }
 
 }
-        // NÄSTA MATCH
-        const next =
-            document.getElementById(
-                "next-match-container"
+       // NÄSTA MATCH
+
+const next =
+    document.getElementById(
+        "next-match-container"
+    );
+
+if (next && data.Resultat) {
+
+    const nextMatch =
+        data.Resultat.find(row => {
+
+            const home = row[3];
+            const away = row[5];
+            const result = row[7];
+
+            return (
+                home &&
+                away &&
+                !result
             );
 
-        if (next) {
+        });
 
-            next.innerHTML = `
-                <div class="match">
-                    Automatisk Google Sheets-version aktiv
-                </div>
-            `;
+    if (nextMatch) {
 
-        }
+        next.innerHTML = `
+            <div class="match">
 
+                <strong>
+                    ${nextMatch[3]}
+                    -
+                    ${nextMatch[5]}
+                </strong>
+
+                <br>
+
+                📅 ${nextMatch[2]}
+
+            </div>
+        `;
+
+    }
+
+}
         // PREDICTIONS
         const predictions =
             document.getElementById(

@@ -571,7 +571,23 @@ if (outliers && data.Resultat) {
     }
 
 }
+} catch (error) {
 
+    console.error(error);
+
+    document.body.innerHTML += `
+        <div style="
+            padding:20px;
+            color:red;
+        ">
+            API-fel:
+            ${error.message}
+        </div>
+    `;
+
+}
+
+}
 document.addEventListener(
     "DOMContentLoaded",
     () => {

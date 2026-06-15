@@ -2,24 +2,24 @@
   "matches": [
     {
       "id": 1,
-      "name": "🇳🇱 Nederländerna - 🇯🇵 Japan",
+      "name": "🇪🇸 Spanien - 🇨🇻 Kap Verde",
       "predictions": [
-        { "namn": "JOL", "tips": "3-2" },
-        { "namn": "NKK", "tips": "3-1" },
-        { "namn": "KMK", "tips": "1-5" },
-        { "namn": "VVN", "tips": "1-1" },
-        { "namn": "JSN", "tips": "2-2" },
-        { "namn": "VOH", "tips": "3-1" },
-        { "namn": "JBM", "tips": "2-2" },
-        { "namn": "EHN", "tips": "2-1" },
-        { "namn": "ESM", "tips": "1-1" },
-        { "namn": "JKN", "tips": "1-0" },
-        { "namn": "RNI", "tips": "2-1" },
-        { "namn": "GSA", "tips": "3-1" },
-        { "namn": "TPL", "tips": "2-1" },
-        { "namn": "AAI", "tips": "3-1" },
-        { "namn": "MNH", "tips": "2-1" },
-        { "namn": "PTR", "tips": "2-1" }
+        { "namn": "JOL", "tips": "3-0" },
+        { "namn": "NKK", "tips": "4-0" },
+        { "namn": "KMK", "tips": "3-1" },
+        { "namn": "VVN", "tips": "2-0" },
+        { "namn": "JSN", "tips": "3-0" },
+        { "namn": "VOH", "tips": "4-1" },
+        { "namn": "JBM", "tips": "3-0" },
+        { "namn": "EHN", "tips": "2-0" },
+        { "namn": "ESM", "tips": "3-1" },
+        { "namn": "JKN", "tips": "2-0" },
+        { "namn": "RNI", "tips": "3-0" },
+        { "namn": "GSA", "tips": "4-0" },
+        { "namn": "TPL", "tips": "3-0" },
+        { "namn": "AAI", "tips": "4-1" },
+        { "namn": "MNH", "tips": "3-0" },
+        { "namn": "PTR", "tips": "5-0" }
       ]
     }
   ]

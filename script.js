@@ -518,3 +518,40 @@ async function loadOutliers() {
     }
 
 }
+
+// TESTA GOOGLE SHEETS
+
+const SHEET_URL =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vR-ViW46nVqodnegEWOR0U3PacpwvcRPGvXwapKp3z1qvm2zebW8OUZP7aYhi9_2Q/pub?output=csv";
+
+async function testSheet() {
+
+    try {
+
+        const response =
+            await fetch(
+                SHEET_URL +
+                "&t=" +
+                Date.now()
+            );
+
+        const csv =
+            await response.text();
+
+        console.log(
+            "GOOGLE SHEET:"
+        );
+
+        console.log(csv);
+
+    } catch(error) {
+
+        console.error(
+            error
+        );
+
+    }
+
+}
+
+testSheet();

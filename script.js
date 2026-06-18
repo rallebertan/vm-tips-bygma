@@ -172,7 +172,38 @@ standings.sort((a, b) => {
 
         }
     );
+// =====================================
+// OMGÅNGENS VINNARE
+// =====================================
 
+const roundWinner =
+    document.getElementById(
+        "round-winner-info"
+    );
+
+if (
+    roundWinner &&
+    standings &&
+    standings.length
+) {
+
+    roundWinner.innerHTML = `
+        <h3>
+            🏆 ${standings[0].player}
+        </h3>
+
+        <p>
+            ${standings[0].total}
+            poäng
+        </p>
+
+        <p>
+            ${standings[0].fullträffar}
+            fullträffar
+        </p>
+    `;
+
+}
     // AKTUELL LEDARE
     if (standings.length > 0) {
 

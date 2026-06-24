@@ -173,7 +173,7 @@ standings.sort((a, b) => {
         }
     );
 // =====================================
-// OMGÅNGENS VINNARE
+// OMGÅNGENS COACH
 // =====================================
 
 const roundWinner =
@@ -181,46 +181,50 @@ const roundWinner =
         "round-winner-info"
     );
 
-if (
-    roundWinner &&
-    standings &&
-    standings.length
-) {
+if (roundWinner) {
 
     roundWinner.innerHTML = `
-        <h3>
-            🏆 ${standings[0].player}
-        </h3>
 
-        <p>
-            ${standings[0].total}
-            poäng
-        </p>
+        <img
+            src="omgangens-coach.png"
+            alt="Omgångens Coach"
+            style="
+                width:100%;
+                border-radius:12px;
+                margin-bottom:15px;
+            "
+        >
 
-        <p>
-            ${standings[0].fullträffar}
-            fullträffar
-        </p>
+        <div style="text-align:center">
+
+            <h3 style="
+                color:#d4a62a;
+                font-size:32px;
+                margin-bottom:10px;
+            ">
+                🏆 VIGGO
+            </h3>
+
+            <p style="
+                font-size:22px;
+                font-weight:600;
+            ">
+                OMGÅNGENS COACH
+            </p>
+
+            <p style="
+                margin-top:10px;
+                color:#bbb;
+            ">
+                Pressa hårt • Drick mycket • Ha kul 🍻
+            </p>
+
+        </div>
+
     `;
 
 }
-    // AKTUELL LEDARE
-    if (standings.length > 0) {
 
-        const leader =
-            document.getElementById(
-                "leader-container"
-            );
-
-        leader.innerHTML = `
-            <h3>${standings[0].player}</h3>
-            <p>${standings[0].total} poäng</p>
-            <p>${standings[0].fullträffar} fullträffar</p>
-        `;
-
-    }
-
-}
        // NÄSTA MATCH
 
 const next =

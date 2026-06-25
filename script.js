@@ -37,10 +37,43 @@ async function loadEverything() {
                         x => x !== "Resultat"
                     );
 
-            leader.innerHTML = `
-                <h3>🏆 VM-TIPSET</h3>
-                <p>${sheets.length} deltagare laddade</p>
-            `;
+    const standings = [];
+
+Object.keys(data)
+    .filter(name => name !== "Resultat")
+    .forEach(player => {
+
+        let total = 0;
+
+        data[player].forEach(row => {
+            total += parseInt(row[9]) || 0;
+        });
+
+        standings.push({
+            player,
+            total
+        });
+
+    });
+
+standings.sort((a, b) => b.total - a.total);
+
+leader.innerHTML = `
+    <h3 style="font-size:42px;color:#d4a62a;">
+        🥇 ${standings[0].player}
+    </h3>
+
+    <p style="font-size:22px;">
+        Leder VM-tipset med
+        <strong>${standings[0].total} poäng</strong>
+    </p>
+
+    <br>
+
+    <small>
+        ${Object.keys(data).length - 1} deltagare
+    </small>
+`;
         }
 
         // MATCHER
